@@ -95,7 +95,7 @@ class JsxParser
 		{
 			result += reEntity.matchedLeft();
 			var entity = reEntity.matched(0);
-			if (map.exists(entity)) result += map.get(entity);
+			if (map.exists(entity)) result += haxe.Utf8.decode(map.get(entity));
 			else result += entity; // no match
 			value = reEntity.matchedRight();
 		}
